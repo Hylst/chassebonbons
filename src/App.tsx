@@ -1,3 +1,4 @@
+import { InfoModal } from './components/InfoModal';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Game, type GameState, type Hud, type OverInfo } from './game/engine';
 import { audio } from './game/audio';
@@ -29,6 +30,7 @@ const LEGEND: { icon: string; title: string; text: string }[] = [
 const DRIFTERS = ['🎃', '🦇', '👻', '🍬', '🦇', '🕷️', '🍭', '🎃'];
 
 export default function App() {
+  const [showInfo, setShowInfo] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const gameRef = useRef<Game | null>(null);
   const stateRef = useRef<GameState>('menu');
@@ -361,6 +363,18 @@ export default function App() {
           </div>
         </aside>
       </div>
+
+      {/* Bouton Infos technique */}
+      <button
+        onClick={() => setShowInfo(true)}
+        className="fixed top-2.5 right-2.5 z-[100] flex items-center gap-1 rounded-lg border border-slate-700/60 bg-slate-900/80 px-2 py-1 text-xs text-amber-200 shadow-md backdrop-blur hover:bg-slate-800 transition cursor-pointer select-none"
+        title="Comment ce jeu a été fait"
+        aria-label="Infos sur le jeu"
+      >
+        <span>ℹ️</span>
+        <span className="hidden sm:inline">Infos</span>
+      </button>
+      <InfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
     </div>
   );
 }
