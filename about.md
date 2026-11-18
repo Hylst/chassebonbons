@@ -16,5 +16,5 @@ Un jeu de plateforme verticale rétro d'Halloween où tu sautes de corniche en c
 - 100% statique, sans serveur ni collecte de donnees
 
 ## Contact
-- Email : geoffroy.streit@gmail.com
+- Email : geoffroy.streit@ik.me
 - Plateforme : https://games.hylst.fr/
