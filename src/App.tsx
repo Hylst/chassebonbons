@@ -23,7 +23,7 @@ const LEGEND: { icon: string; title: string; text: string }[] = [
   { icon: '🦇', title: 'Chauve-souris', text: 'Saute dessus pour l\'écraser (+50).' },
   { icon: '👻', title: 'Fantôme', text: 'Il te traque. Ne le touche pas !' },
   { icon: '🧪', title: 'Potion', text: 'Un bouclier qui absorbe 1 coup.' },
-  { icon: '⭐', title: 'Super Sucre', text: 'Fusée invincible pendant 2 s.' },
+  { icon: '⭐', title: 'Super Sucre', text: 'Fusée invincible pendant 1,9 s.' },
   { icon: '🪵', title: 'Branche sèche', text: 'Elle casse juste après ton saut.' },
 ];
 
